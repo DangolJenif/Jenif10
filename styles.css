@@ -1,0 +1,203 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 10;
+  }
+  
+  header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    padding-left: 20px;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #3498db;
+  }
+  
+  /* Hero Section */
+  #home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #222; /* Placeholder background */
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .cta-btn {
+    background-color: #3498db;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Project Grid */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust column size */
+    gap: 15px; /* Reduce gap between projects */
+    margin: 20px 10px; /* Add margin for spacing */
+    padding: 0; /* Remove unnecessary padding */
+  }
+  
+  .project {
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    background-color: #222;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .project img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+  }
+  
+  .project h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .project p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    #home h2 {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    #home h2 {
+      font-size: 36px;
+    }
+  
+    .cta-btn {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  
+    header .logo h1 {
+      font-size: 20px;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .hero p {
+      font-size: 18px;
+    }
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
